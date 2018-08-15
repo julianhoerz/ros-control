@@ -111,12 +111,12 @@ void TeleopTurtle::keyLoop()
         break;
       case KEYCODE_U:
         ROS_DEBUG("UP");
-        linear_ = 0.3;
+        linear_ = 1.0;
         dirty = true;
         break;
       case KEYCODE_D:
         ROS_DEBUG("DOWN");
-        linear_ = -0.3;
+        linear_ = -1.0;
         dirty = true;
         break;
     }
