@@ -82,7 +82,7 @@ void TeleopTurtle::keyLoop()
 
   puts("Reading from keyboard");
   puts("---------------------------");
-  puts("Use arrow keys to move the turtle.");
+  puts("Use arrow keys to move the BoSCHTUHL.");
 
 
   for(;;)
@@ -101,22 +101,22 @@ void TeleopTurtle::keyLoop()
     {
       case KEYCODE_L:
         ROS_DEBUG("LEFT");
-        angular_ = 0.3;
+        angular_ = 1.0;
         dirty = true;
         break;
       case KEYCODE_R:
         ROS_DEBUG("RIGHT");
-        angular_ = -0.3;
+        angular_ = -1.0;
         dirty = true;
         break;
       case KEYCODE_U:
         ROS_DEBUG("UP");
-        linear_ = 1.0;
+        linear_ = 0.3;
         dirty = true;
         break;
       case KEYCODE_D:
         ROS_DEBUG("DOWN");
-        linear_ = -1.0;
+        linear_ = -0.3;
         dirty = true;
         break;
     }
