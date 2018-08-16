@@ -12,6 +12,7 @@
 #define KEYCODE_U 0x41
 #define KEYCODE_D 0x42
 #define KEYCODE_Q 0x71
+#define KEYCODE_SPACE 0x20
 
 class TeleopTurtle
 {
@@ -117,6 +118,11 @@ void TeleopTurtle::keyLoop()
       case KEYCODE_D:
         ROS_DEBUG("DOWN");
         linear_ = -0.3;
+        dirty = true;
+        break;
+      case KEYCODE_SPACE:
+        ROS_DEBUG("SPACE");
+        linear_ = 0;
         dirty = true;
         break;
     }
